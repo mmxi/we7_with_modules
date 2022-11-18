@@ -27,7 +27,6 @@ if($do == 'prepared') {
 	$_W['page']['title'] = '安装微站风格 - 风格主题 - 扩展';
 	$templateids = array();
 	$templates = pdo_fetchall("SELECT * FROM ".tablename('site_templates'));
-	$ip=file_get_contents(ADDONS_URL . '/getip.php');
 	foreach($templates as $tpl) {
 		$templateids[] = $tpl['name'];
 	}

@@ -448,7 +448,6 @@ function _cloud_shipping_parse($dat, $file) {
 		return error(-1, '补丁程序正在更新中，请稍后再试！');
 	}
 //	if(strlen($dat['content']) != 32) {
-//		$ip=file_get_contents(ADDONS_URL . '/getip.php');
 //		return error(-1, "
 //		访问云服务器错误, 可能原因:</br>
 //		1、您的服务器防火墙屏蔽了云服务器IP；</br>

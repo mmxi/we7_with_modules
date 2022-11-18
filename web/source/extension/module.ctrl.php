@@ -247,7 +247,6 @@ if($do == 'prepared') {
 	$recycle_modules = array_keys($recycle_modules);
 	$moduleids = array();
 	$modules = pdo_fetchall("SELECT `name` FROM " . tablename('modules') . ' ORDER BY `issystem` DESC, `mid` ASC');
-	$ip=@file_get_contents(ADDONS_URL . '/getip.php');
 	if(!empty($modules)) {
 		foreach($modules as $m) {
 			$moduleids[] = $m['name'];
@@ -342,11 +341,12 @@ if($do == 'install') {
 	}
 
 	$manifest = ext_module_manifest($modulename);
+
 	if (!empty($manifest)) {
-		$r = cloud_m_prepare($modulename);
-		if (is_error($r)) {
-			itoast($r['message'], url('extension/module/prepared'), 'error');
-		}
+//		$r = cloud_m_prepare($modulename);
+//		if (is_error($r)) {
+//			itoast($r['message'], url('extension/module/prepared'), 'error');
+//		}
 	}
 
 	if (empty($manifest)) {

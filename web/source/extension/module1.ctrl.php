@@ -257,7 +257,6 @@ if($do == 'prepared') {
 	$recycle_modules = array_keys($recycle_modules);
 	$moduleids = array();
 	$modules = pdo_fetchall("SELECT `name` FROM " . tablename('modules') . ' ORDER BY `issystem` DESC, `mid` ASC');
-	$ip=@file_get_contents(ADDONS_URL . '/getip.php');
 	if(!empty($modules)) {
 		foreach($modules as $m) {
 			$moduleids[] = $m['name'];
